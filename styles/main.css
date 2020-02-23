@@ -1,3 +1,5 @@
+/*GLOBAL*/
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -6,6 +8,14 @@ body {
   max-width: 1020px;
   margin: 0 auto;
 }
+
+.inner-wrap {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/*HEADER*/
 
 header {
   height: 89px;
@@ -69,9 +79,20 @@ ul {
   text-transform: uppercase;
 }
 
+ul li {
+  cursor: pointer;
+  transition: linear 0.3s;
+}
+
+ul li:hover {
+  color: yellow;
+}
+
 .red-letter {
   color: #FF0000;
 }
+
+/*SLIDER*/
 
 .slider {
   position: relative;
@@ -88,11 +109,10 @@ ul {
   background-color: #EA676B;
 }
 
-
 .phone-vertical {
   position: absolute;
   top: 52px;
-  left: 112px;
+  left: 70px;
 }
 
 .phone-vertical img {
@@ -103,10 +123,102 @@ ul {
 .phone-horizontal {
   position: absolute;
   top: 173px;
-  right: 110px;
+  right: 70px;
 }
 
 .phone-horizontal img {
   width: 484px;
   height: 240px;
+}
+
+.arrow {
+  font-size: 2em;
+  color: #ca4549;
+  cursor: pointer;
+  transition: ease-out 0.2s;
+}
+
+.arrow:hover {
+  color: #ffffff;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 275px;
+  left: 1px;
+
+}
+
+.arrow-right {
+  position: absolute;
+  top: 275px;
+  right: 1px;
+}
+
+/*SERVICES*/
+
+.section-services {
+  width: 1020px;
+  height: 496px;
+  background-color: #f2f2f2;
+}
+
+.services-header {
+  padding: 68px 0;
+  height: 40px;
+}
+
+.services-header h1 {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 17.86px;
+  color: #666d89;
+}
+
+.services-header p {
+  font-size: 17.7px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #767e9e;
+  padding: 6px 0;
+}
+
+/*Grid and Flex Stuff*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 24px;
+  grid-column-gap: 27px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.services {
+  margin-top: 39px;
+}
+
+.description {
+  padding-left: 15px;
+}
+
+.services h4 {
+  font-size: 18px;
+  color: #666d89;
+  font-weight: 900;
+  line-height: 17.86px;
+  margin: 0;
+  padding: 0;
+}
+
+.services p {
+  font-size: 12px;
+  color: #767e9e;
+  font-weight: 400;
+  line-height: 21.56px;
+  margin-top: 10px;
+  padding: 0;
 }

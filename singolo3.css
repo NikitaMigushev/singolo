@@ -42,7 +42,7 @@ body h1 {
 
 section.get-quote {
   background: #f06c64;
-  padding-bottom: 61px;
+  padding-bottom: 5px;
 
 }
 
@@ -91,6 +91,24 @@ textarea {
 
 textarea {
   resize: none;
+}
+
+input,
+select,
+textarea {
+  color: #f0d8d9;
+}
+
+button {
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  max-width: 100px;
+  padding: 10px;
+  background-color: #982649;
+  color: white;
+  font-family: "Lato";
+  border-radius: 5px;
 }
 
 .contact {
@@ -146,4 +164,25 @@ textarea {
   background-color: #ea676b;
   width: 1020px;
   height: 6px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 76px;
+  color: #666d89;
+  background-color: #2d303a;
+  font-size: 12px;
+}
+
+.social {
+  display: flex;
+}
+
+.copyright span {
+  display: inline-block;
+}
+
+.copyright {
+  text-align: center;
 }

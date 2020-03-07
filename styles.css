@@ -111,7 +111,7 @@ header ul li:hover {
 .phone-vertical {
   position: absolute;
   top: 52px;
-  left: 70px;
+  left: 72px;
 }
 
 .phone-vertical img {
@@ -122,7 +122,7 @@ header ul li:hover {
 .phone-horizontal {
   position: absolute;
   top: 173px;
-  right: 70px;
+  right: 71px;
 }
 
 .phone-horizontal img {
@@ -143,14 +143,14 @@ header ul li:hover {
 
 .arrow-left {
   position: absolute;
-  top: 275px;
-  left: 1px;
+  top: 274px;
+  left: 0px;
 }
 
 .arrow-right {
   position: absolute;
-  top: 275px;
-  right: 1px;
+  top: 274px;
+  right: -1px;
 }
 
 /*SECTION HEADERS*/
@@ -183,8 +183,15 @@ header ul li:hover {
   background-color: #f2f2f2;
 }
 
+.section-services .section-header p {
+  position: relative;
+  bottom: -5px;
+}
+
 /*Grid and Flex Stuff*/
 .grid-container {
+  position: relative;
+  bottom: -3px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-row-gap: 20px;
@@ -226,7 +233,12 @@ header ul li:hover {
 
 section.portfolio {
   background-color: #2d303a;
-  padding-bottom: 70px;
+  padding-bottom: 62px;
+}
+
+section.portfolio .section-header p {
+  position: relative;
+  bottom: -5px;
 }
 
 /*Menu*/
@@ -234,7 +246,7 @@ section.portfolio {
 div.header-menu {
   max-width: 290px;
   padding-bottom: 30px;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 section.portfolio ul {
@@ -281,13 +293,18 @@ section.about {
   padding-bottom: 65px;
 }
 
+section.about .section-header p {
+  position: relative;
+  bottom: -5px;
+}
+
 .about-header {
   padding-top: 60px;
   padding-bottom: 43px;
 }
 
 section.about div.team {
-  padding-top: 25px;
+  padding-top: 28px;
 }
 
 section.about .team .team-container {
@@ -335,7 +352,7 @@ section.about .team .team-container p {
 
 section.get-quote {
   background: #f06c64;
-  padding-bottom: 6px;
+  padding-bottom: 15px;
 }
 
 div.form-header {

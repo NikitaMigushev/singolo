@@ -335,7 +335,7 @@ section.about .team .team-container p {
 
 section.get-quote {
   background: #f06c64;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 div.form-header {
@@ -454,4 +454,33 @@ button {
   background-color: #ea676b;
   width: 1020px;
   height: 6px;
+}
+
+/*FOOTER*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 76px;
+  color: #666d89;
+  background-color: #2d303a;
+  font-size: 12px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.social>div {
+  margin-right: 8px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
 }

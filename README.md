@@ -16,3 +16,5 @@
 - singolo full version - [последний коммит 07.03.2020](https://github.com/NikitaMigushev/singolo/commit/f08536c90b49c9b538dbe0cdbfa5c855dc31a433)
 
 ## [Задеплоенный singolo в gh-pages](https://nikitamigushev.github.io/singolo/index.html)
+
+## PixelPerfect приводился в соотвтствие в браузере Google Chrome

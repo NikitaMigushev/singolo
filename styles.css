@@ -178,9 +178,8 @@ header ul li:hover {
 /*SERVICES*/
 
 .section-services {
-  width: 1020px;
-  height: 496px;
   background-color: #f2f2f2;
+  padding-bottom: 40px;
 }
 
 .section-services .section-header p {
@@ -220,6 +219,10 @@ header ul li:hover {
 }
 
 .services p {
+  display: block;
+  height: 70px;
+  width: 220px;
+  overflow: hidden;
   font-size: 12px;
   color: #767e9e;
   font-weight: 300;
@@ -227,6 +230,12 @@ header ul li:hover {
   line-height: 21.56px;
   margin-top: 10px;
   padding: 0;
+}
+
+.services-bottom {
+  width: 1020px;
+  height: 6px;
+  background-color: #ffffff;
 }
 
 /*PORTFOLIO*/
@@ -277,7 +286,12 @@ div.portfolio-items {
   grid-column-gap: 18px;
   grid-row-gap: 18px;
   justify-content: space-between;
+}
+
+.grid-wrapper {
   margin-top: -10px;
+  height: 609px;
+  overflow: hidden;
 }
 
 .portfolio-bottom {
@@ -314,6 +328,10 @@ section.about .team .team-container {
 }
 
 section.about .team .team-container h2 {
+  display: block;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
   padding-top: 14px;
   padding-bottom: 10px;
 }
@@ -422,6 +440,10 @@ button {
 .contact {
   padding-left: 20px;
   max-width: 320px;
+}
+
+.contact a {
+  text-decoration: none;
 }
 
 .contact h2 {

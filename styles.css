@@ -179,7 +179,7 @@ header ul li:hover {
 
 .section-services {
   background-color: #f2f2f2;
-  padding-bottom: 40px;
+  padding-bottom: 46px;
 }
 
 .section-services .section-header p {
@@ -193,8 +193,8 @@ header ul li:hover {
   bottom: -3px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 20px;
-  grid-column-gap: 27px;
+  grid-row-gap: 15px;
+  grid-column-gap: 20px;
 }
 
 .service-container {
@@ -370,7 +370,7 @@ section.about .team .team-container p {
 
 section.get-quote {
   background: #f06c64;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 div.form-header {

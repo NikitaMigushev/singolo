@@ -16,17 +16,27 @@
   <div class="page-wrap">
     <header>
       <div class="inner-wrap">
-        <div class="container">
+        <div class="container" id="home">
           <div class="logo">
             <img src="assets/logo.png" alt="">
           </div>
           <div class="menu-block">
             <ul>
-              <li>home</li>
-              <li>services</li>
-              <li>portfolio</li>
-              <li>about</li>
-              <li>contact</li>
+              <a href='#home'>
+                <li>home</li>
+              </a>
+              <a href="#services">
+                <li>services</li>
+              </a>
+              <a href="#portfolio">
+                <li>portfolio</li>
+              </a>
+              <a href="#about">
+                <li>about</li>
+              </a>
+              <a href="#contact">
+                <li>contact</li>
+              </a>
             </ul>
           </div>
         </div>
@@ -50,7 +60,7 @@
       </div>
     </section>
     <div class="slider-bottom"></div>
-    <section class="section-services">
+    <section class="section-services" id="services">
       <div class="inner-wrap">
         <div class="section-header">
           <h1>Our Services</h1>
@@ -139,7 +149,7 @@
       </div>
     </section>
     <div class="services-bottom"></div>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="inner-wrap">
         <div class="section-header">
           <h1>Portfolio</h1>
@@ -199,7 +209,7 @@
       </div>
     </section>
     <div class="portfolio-bottom"></div>
-    <section class="about">
+    <section class="about" id="about">
       <div class="inner-wrap">
         <div class="section-header">
           <h1>About Us</h1>
@@ -283,7 +293,7 @@
       </div>
     </section>
     <div class="about-bottom"></div>
-    <section class="get-quote">
+    <section class="get-quote" id="contact">
       <div class="inner-wrap">
         <div class="section-header">
           <h1>Get a Quote</h1>
@@ -356,4 +366,5 @@
       </div>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>

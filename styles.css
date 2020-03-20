@@ -102,7 +102,7 @@ header ul li:hover {
 
 /*SLIDER*/
 
-.slider {
+.slider-section {
   position: relative;
   display: block;
   width: 1020px;
@@ -110,56 +110,92 @@ header ul li:hover {
   background-color: #f06c64;
 }
 
-.slider-bottom {
-  display: block;
+.slideshow {
+  overflow: hidden;
+  position: relative;
   width: 1020px;
-  height: 6px;
-  background-color: #ea676b;
+  height: 595px;
 }
 
-.phone-vertical {
-  position: absolute;
-  top: 52px;
-  left: 72px;
+.slider {
+  position: relative;
+  display: flex;
+  width: 400%;
 }
 
-.phone-vertical img {
-  width: 240px;
-  height: 483px;
+/*First slide*/
+
+.s1 {
+  position: relative;
+  width: 1020px;
+  height: 595px;
+  background-color: #f06c64;
+  z-index: 0;
 }
 
 .phone-horizontal {
   position: absolute;
-  top: 173px;
-  right: 71px;
+  top: 170px;
+  right: 110px;
 }
 
-.phone-horizontal img {
-  width: 484px;
-  height: 240px;
+.phone-vertical {
+  position: relative;
+  top: 50px;
+  left: 110px;
 }
+
+.black-screen-vertical {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 11px;
+  width: 193px;
+  height: 340px;
+  background-color: black;
+}
+
+/*Slide 2*/
+
+.s2 {
+  display: flex;
+  background-color: #648bf0;
+  width: 1020px;
+  height: 595px;
+  align-items: center;
+  justify-content: center;
+}
+
+.s2-image {
+  margin: 0 auto;
+}
+
+/*Arrows*/
 
 .arrow {
   font-size: 2em;
-  color: #ca4549;
+  color: #dadada;
+  opacity: 0.5;
   cursor: pointer;
   transition: ease-out 0.2s;
-}
-
-.arrow:hover {
-  color: #ffffff;
+  z-index: 1;
 }
 
 .arrow-left {
   position: absolute;
   top: 274px;
-  left: 0px;
+  left: 40px;
 }
 
 .arrow-right {
   position: absolute;
   top: 274px;
-  right: -1px;
+  right: 40px;
+}
+
+.arrow:hover {
+  color: #ffffff;
+  opacity: 1;
 }
 
 /*SECTION HEADERS*/

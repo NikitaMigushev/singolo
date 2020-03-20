@@ -105,15 +105,6 @@ phoneHorizontal.forEach(element => {
   })
 })
 
-
-
-
-
-
-
-
-
-
 const carouselSlider = document.querySelector(".slider");
 const carouselImages = document.querySelectorAll(".slide")
 

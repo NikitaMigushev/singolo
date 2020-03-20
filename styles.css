@@ -140,18 +140,34 @@ header ul li:hover {
 }
 
 .phone-vertical {
+  max-width: 220px;
   position: relative;
   top: 50px;
   left: 110px;
 }
 
-.black-screen-vertical {
+.phone-vertical,
+.phone-horizontal {
+  cursor: pointer;
+}
+
+.phoneVertical-blackScreen {
   display: none;
   position: absolute;
   top: 60px;
   left: 11px;
   width: 193px;
   height: 340px;
+  background-color: black;
+}
+
+.phoneHorizontal-blackScreen {
+  display: none;
+  position: absolute;
+  top: 13px;
+  right: 80px;
+  width: 350px;
+  height: 190px;
   background-color: black;
 }
 
@@ -443,7 +459,7 @@ form {
   width: 620px;
 }
 
-form>input,
+form > input,
 textarea {
   margin-top: 15px;
   padding: 12px;
@@ -558,7 +574,7 @@ footer {
   margin-right: 30px;
 }
 
-.social>div {
+.social > div {
   margin-right: 8px;
 }
 

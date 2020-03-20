@@ -20,10 +20,6 @@ function createFirstAndLastClone() {
   let carouselSlider = document.querySelector(".slider");
   let carouselImages = document.querySelectorAll(".slide")
 
-  console.log(carouselSlider);
-  console.log(carouselImages);
-
-
   let firstChild = carouselImages[0];
 
   let firstClone = firstChild.cloneNode(true);
@@ -42,11 +38,81 @@ function createFirstAndLastClone() {
 
   let firstSlide = document.querySelectorAll('.firstSlide');
 
-
-
 }
 
 createFirstAndLastClone()
+
+// Add black-screen on vertical-phones
+
+const phoneVertical = document.querySelectorAll('.phone-vertical')
+
+phoneVertical.forEach(element => {
+  element.innerHTML += `<div class="phoneVertical-blackScreen"></div>`
+});
+
+
+const verticalBlackScreen = {
+  display: 'none',
+  selector: document.querySelectorAll('.phoneVertical-blackScreen')
+}
+
+phoneVertical.forEach(element => {
+  element.addEventListener('click', () => {
+    if (verticalBlackScreen.display === 'none') {
+      verticalBlackScreen.selector.forEach(element => {
+        element.style = 'display: block';
+        verticalBlackScreen.display = 'block'
+      })
+    } else {
+      verticalBlackScreen.selector.forEach(element => {
+        element.style = 'display: none';
+        verticalBlackScreen.display = 'none'
+      })
+
+    }
+  })
+})
+
+
+// Add black-screen on horizontal-phones
+
+const phoneHorizontal = document.querySelectorAll('.phone-horizontal')
+
+phoneHorizontal.forEach(element => {
+  element.innerHTML += `<div class="phoneHorizontal-blackScreen"></div>`
+});
+
+
+const horizontalBlackScreen = {
+  display: 'none',
+  selector: document.querySelectorAll('.phoneHorizontal-blackScreen')
+}
+
+phoneHorizontal.forEach(element => {
+  element.addEventListener('click', () => {
+    if (horizontalBlackScreen.display === 'none') {
+      horizontalBlackScreen.selector.forEach(element => {
+        element.style = 'display: block';
+        horizontalBlackScreen.display = 'block'
+      })
+    } else {
+      horizontalBlackScreen.selector.forEach(element => {
+        element.style = 'display: none';
+        horizontalBlackScreen.display = 'none'
+      })
+
+    }
+  })
+})
+
+
+
+
+
+
+
+
+
 
 const carouselSlider = document.querySelector(".slider");
 const carouselImages = document.querySelectorAll(".slide")

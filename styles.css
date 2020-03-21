@@ -341,6 +341,10 @@ section.portfolio ul li:hover {
   border: 1px solid white;
 }
 
+.activePortfolio {
+  color: white;
+}
+
 div.portfolio-items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -349,16 +353,26 @@ div.portfolio-items {
   justify-content: space-between;
 }
 
+div.portfolio-items .grid-item {
+  cursor: pointer;
+}
+
 .grid-wrapper {
   margin-top: -10px;
-  height: 609px;
-  overflow: hidden;
+  padding: 10px 0px;
+  height: 630px;
+  /* overflow: hidden; */
 }
 
 .portfolio-bottom {
   width: 1020px;
   height: 6px;
   background-color: #323746;
+
+}
+
+.activePortfolioItem {
+  outline: 5px solid #F06C64;
 }
 
 /*ABOUT*/
@@ -459,7 +473,7 @@ form {
   width: 620px;
 }
 
-form > input,
+form>input,
 textarea {
   margin-top: 15px;
   padding: 12px;
@@ -574,7 +588,7 @@ footer {
   margin-right: 30px;
 }
 
-.social > div {
+.social>div {
   margin-right: 8px;
 }
 

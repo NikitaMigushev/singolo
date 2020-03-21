@@ -570,6 +570,95 @@ button {
   height: 6px;
 }
 
+
+/*POPUP Window*/
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid lightgray;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 60px;
+  z-index: 10;
+  background-color: white;
+}
+
+#popup h1,
+#popup h2,
+#popup p {
+  color: #373737;
+  margin: 20px 0;
+}
+
+.popup h1 {
+  font-size: 25px;
+}
+
+.popup h2 {
+  font-size: 20px;
+}
+
+#close-button {
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  max-width: 100px;
+  padding: 10px 40px;
+  background-color: #2D303A;
+  color: white;
+  font-family: "Lato";
+  border-radius: 5px;
+  transition: 0.2s ease-out;
+}
+
+#close-button:hover {
+  background-color: rgb(88, 93, 112);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#close-cross {
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  color: #2D303A;
+}
+
+#close-cross:hover {
+  color: rgb(88, 93, 112);
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(85, 85, 85, 0.5);
+  pointer-events: none;
+  opacity: 0;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#popup-description {
+  background-color: rgb(238, 238, 238);
+  color: #373737;
+  margin-top: 0;
+}
+
+
 /*FOOTER*/
 
 footer {

@@ -315,10 +315,10 @@
         </div>
         <div class="form-container">
           <div class="form">
-            <form action="">
-              <input type="text" name="name" placeholder="Name (Required)" required>
-              <input type="email" name="email" placeholder="Email (Required)" required>
-              <input type="text" name="subject" placeholder="Subject" required>
+            <form action="" id="form">
+              <input type="text" name="name" id="name" placeholder="Name (Required)" required>
+              <input type="email" name="email" id="email" placeholder="Email (Required)" required>
+              <input type="text" name="subject" id="subject" placeholder="Subject">
               <textarea name="descrition" id="description" cols="30" rows="11"
                 placeholder="Describe your project in detail..."></textarea>
               <button type="submit">Submit</button>
@@ -352,6 +352,23 @@
             </ul>
           </div>
         </div>
+        <div class="popup" id="popup">
+          <div class="popup-header">
+            <h1>Письмо отправлено!</h1>
+            <div class="close-button" id="close-cross">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+          <div class="popup-theme">
+            <h2 id="popup-theme"></h2>
+          </div>
+          <div class="popup-description">
+            <h2>Описание:</h2>
+            <textarea id="popup-description" rows="10" cols="45" readonly></textarea>
+          </div>
+          <button class="close-button" id="close-button">OK</button>
+        </div>
+        <div id="overlay"></div>
       </div>
     </section>
     <div class="get-quote-bottom"></div>

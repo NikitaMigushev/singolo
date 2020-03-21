@@ -173,7 +173,6 @@ function portfolioActiveClass(e) {
 const portfolioItem = document.querySelectorAll(
   ".portfolio-items .grid-item img"
 );
-console.log(portfolioItem);
 
 portfolioItem.forEach(element => {
   element.addEventListener("click", activePortfolioItem);
@@ -185,5 +184,49 @@ function activePortfolioItem(e) {
     portfolioItem[i].classList.remove("activePortfolioItem");
   }
   e.target.classList.add("activePortfolioItem");
-  console.log(e.target);
 }
+
+// Submit form
+
+const form = document.querySelector("#form");
+const popup = document.querySelector("#popup");
+const overlay = document.querySelector("#overlay");
+const closeButton = document.querySelectorAll(".close-button");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  let name = document.querySelector("#name");
+  let email = document.querySelector("#email");
+  let subject = document.querySelector("#subject");
+  let description = document.querySelector("#description");
+
+  popup.style = "display:block;";
+  overlay.classList.add("active");
+
+  const popupTheme = document.querySelector("#popup-theme");
+  const popupDescription = document.querySelector("#popup-description");
+
+  if (subject.value === "") {
+    popupTheme.innerHTML = `Без темы`;
+  } else {
+    popupTheme.innerHTML = `Тема: ${subject.value}`;
+  }
+
+  if (description.value === "") {
+    popupDescription.value = `Без описания`;
+  } else {
+    popupDescription.value = `${description.value}`;
+  }
+
+  const closeButton = document.querySelectorAll(".close-button");
+  closeButton.forEach(el => {
+    el.addEventListener("click", () => {
+      popup.style = "display:none;";
+      overlay.classList.remove("active");
+      name.value = "";
+      email.value = "";
+      subject.value = "";
+      description.value = "";
+    });
+  });
+});

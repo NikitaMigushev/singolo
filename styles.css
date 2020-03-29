@@ -1,5 +1,5 @@
 /*GLOBAL*/
-  {
+* {
   box-sizing: border-box;
 }
 
@@ -116,6 +116,7 @@ nav li:hover {
 }
 
 .slideshow {
+  width: 950px;
   overflow: hidden;
   position: relative;
   height: 595px;
@@ -218,7 +219,9 @@ nav li:hover {
   opacity: 1;
 }
 
-\/*SECTION HEADERS*/ .section-header {
+/*SECTION HEADERS*/
+
+.section-header {
   padding: 42px 0 0 0;
 }
 
@@ -564,7 +567,7 @@ form {
   width: 620px;
 }
 
-form>input,
+form > input,
 textarea {
   margin-top: 15px;
   padding: 12px;
@@ -768,7 +771,7 @@ footer .wrapper {
   justify-content: center;
 }
 
-.social>div {
+.social > div {
   margin-right: 8px;
 }
 

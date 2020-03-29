@@ -112,6 +112,8 @@ const nextBtn = document.querySelector(".next");
 let counter = 1;
 const size = carouselImages[0].clientWidth; // set the size of the image
 
+const sliderSection = document.querySelector(".slider-section");
+
 carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
 
 // button listeners
@@ -119,6 +121,15 @@ carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
 nextBtn.addEventListener("click", function() {
   if (counter >= carouselImages.length - 1) return;
   carouselSlider.style.transition = "transform 0.4s ease-in-out";
+  if (counter === 1) {
+    sliderSection.style.cssText =
+      "background-color: #648BF0;border-bottom: 6px solid #5D5BC5";
+  }
+
+  if (counter === 2) {
+    sliderSection.style.cssText =
+      "background-color: #F06C64;border-bottom: 6px solid #d76268";
+  }
   counter++;
   carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
 });
@@ -126,6 +137,15 @@ nextBtn.addEventListener("click", function() {
 prevBtn.addEventListener("click", function() {
   if (counter <= 0) return; // remove bug when clicking button too fast
   carouselSlider.style.transition = "transform 0.4s ease-in-out";
+  if (counter === 1) {
+    sliderSection.style.cssText =
+      "background-color: #648BF0;border-bottom: 6px solid #5D5BC5";
+  }
+
+  if (counter === 2) {
+    sliderSection.style.cssText =
+      "background-color: #F06C64;border-bottom: 6px solid #d76268";
+  }
   counter--;
   carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
 });
@@ -230,3 +250,36 @@ form.addEventListener("submit", e => {
     });
   });
 });
+
+//Smooth Scroll
+
+function anchorLinkHandler(e) {
+  const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+
+  e.preventDefault();
+  const targetID = this.getAttribute("href");
+  const targetAnchor = document.querySelector(targetID);
+  if (!targetAnchor) return;
+  const originalTop = distanceToTop(targetAnchor);
+
+  window.scrollBy({
+    top: originalTop,
+    left: 0,
+    behavior: "smooth"
+  });
+
+  const checkIfDone = setInterval(function() {
+    const atBottom =
+      window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+    if (distanceToTop(targetAnchor) === 0 || atBottom) {
+      targetAnchor.tabIndex = "-1";
+      targetAnchor.focus();
+      window.history.pushState("", "", targetID);
+      clearInterval(checkIfDone);
+    }
+  }, 100);
+}
+
+const linksToAnchors = document.querySelectorAll('a[href^="#"]');
+
+linksToAnchors.forEach(each => (each.onclick = anchorLinkHandler));

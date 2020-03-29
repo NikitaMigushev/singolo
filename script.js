@@ -1,6 +1,6 @@
 //Menu
 
-const activeclass = document.querySelectorAll(".menuli");
+const activeclass = document.querySelectorAll(".menuli a");
 for (var i = 0; i < activeclass.length; i++) {
   activeclass[i].addEventListener("click", activateClass);
 }
@@ -118,7 +118,7 @@ carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
 
 // button listeners
 
-nextBtn.addEventListener("click", function() {
+nextBtn.addEventListener("click", function () {
   if (counter >= carouselImages.length - 1) return;
   carouselSlider.style.transition = "transform 0.4s ease-in-out";
   if (counter === 1) {
@@ -134,7 +134,7 @@ nextBtn.addEventListener("click", function() {
   carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
 });
 
-prevBtn.addEventListener("click", function() {
+prevBtn.addEventListener("click", function () {
   if (counter <= 0) return; // remove bug when clicking button too fast
   carouselSlider.style.transition = "transform 0.4s ease-in-out";
   if (counter === 1) {
@@ -268,7 +268,7 @@ function anchorLinkHandler(e) {
     behavior: "smooth"
   });
 
-  const checkIfDone = setInterval(function() {
+  const checkIfDone = setInterval(function () {
     const atBottom =
       window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
     if (distanceToTop(targetAnchor) === 0 || atBottom) {
@@ -283,3 +283,29 @@ function anchorLinkHandler(e) {
 const linksToAnchors = document.querySelectorAll('a[href^="#"]');
 
 linksToAnchors.forEach(each => (each.onclick = anchorLinkHandler));
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+  const curPos = window.scrollY;
+  const anchors = document.querySelectorAll('.anchor')
+  const links = document.querySelectorAll('.menuli a')
+
+  anchors.forEach((el) => {
+    console.log(el.getAttribute('id'))
+  })
+
+  anchors.forEach((el) => {
+    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      links.forEach((a) => {
+        a.classList.remove('active');
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('active');
+        }
+      })
+
+    }
+
+  });
+
+}

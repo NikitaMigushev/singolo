@@ -1,5 +1,5 @@
 /*GLOBAL*/
- {
+  {
   box-sizing: border-box;
 }
 
@@ -535,6 +535,7 @@ section.about .team .team-container p {
 section.get-quote {
   background: #f06c64;
   padding-bottom: 20px;
+  padding-top: 0px;
   border-bottom: 6px solid #ea676b;
 }
 
@@ -563,7 +564,7 @@ form {
   width: 620px;
 }
 
-form > input,
+form>input,
 textarea {
   margin-top: 15px;
   padding: 12px;
@@ -749,7 +750,7 @@ button {
 /*FOOTER*/
 
 footer {
-  height: 76px;
+  padding: 20px 0px;
   color: #666d89;
   background-color: #2d303a;
   font-size: 12px;
@@ -767,7 +768,7 @@ footer .wrapper {
   justify-content: center;
 }
 
-.social > div {
+.social>div {
   margin-right: 8px;
 }
 
